@@ -9,6 +9,7 @@ class BankApp {
     static Scanner sc;
 
     public BankApp(Scanner scanner) {
+        sc = scanner;
         System.out.print("Enter your name");
         name = sc.nextLine();
         System.out.print("Enter your address");
@@ -19,7 +20,6 @@ class BankApp {
         type = sc.nextLine();
         System.out.print("Enter your balance");
         bal = sc.nextInt();
-        sc = scanner;
     }
 
     public void deposit() {
