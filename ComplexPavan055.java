@@ -14,21 +14,21 @@ public class ComplexPavan055 {
     }
 
     public static void add(ComplexPavan055 c1, ComplexPavan055 c2) {
-        double re = c1.x + c2.x;
-        double im = c1.y + c2.y;
-        if (im < 0)
-            System.out.println("Sum of the Complex numbers = " + re + "-" + (im * -1) + "i");
+        double real = c1.x + c2.x;
+        double img = c1.y + c2.y;
+        if (img < 0)
+            System.out.println("Sum of the Complex numbers = " + real + "-" + (img * -1) + "i");
         else
-            System.out.println("Sum of the Complex numbers = " + re + "+" + im + "i");
+            System.out.println("Sum of the Complex numbers = " + real + "+" + img + "i");
     }
 
     public static void multiply(ComplexPavan055 c1, ComplexPavan055 c2) {
-        double re = c1.x * c2.x + c1.y * c2.y * -1;
-        double im = c1.x * c2.y + c2.x * c1.y;
-        if (im < 0)
-            System.out.println("Product of the complex numbers = " + re + "-" + (im * -1) + "i");
+        double real = c1.x * c2.x + c1.y * c2.y * -1;
+        double img = c1.x * c2.y + c2.x * c1.y;
+        if (img < 0)
+            System.out.println("Product of the complex numbers = " + real + "-" + (img * -1) + "i");
         else
-            System.out.println("Product of the complex numbers = " + re + "+" + im + "i");
+            System.out.println("Product of the complex numbers = " + real + "+" + img + "i");
     }
 
     public static void main(String[] args) {
