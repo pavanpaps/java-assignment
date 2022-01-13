@@ -1,25 +1,26 @@
 import java.util.Scanner;
 
-class BankApp {
+class BankPavan055 {
     String name;
-    int addr;
+    String addr;
     int accno;
     String type;
     int bal;
     static Scanner sc;
 
-    public BankApp(Scanner scanner) {
-        System.out.print("Enter your name");
-        name = sc.nextLine();
-        System.out.print("Enter your address");
-        addr = sc.nextInt();
-        System.out.print("Enter your acc no");
-        accno = sc.nextInt();
-        System.out.print("Enter your account type");
-        type = sc.nextLine();
-        System.out.print("Enter your balance");
-        bal = sc.nextInt();
+    public BankPavan055(Scanner scanner) {
         sc = scanner;
+        System.out.println("Welcome to the banking application 😊 ");
+        System.out.print("Enter the customer's name: ");
+        name = sc.nextLine();
+        System.out.print("Enter the address: ");
+        addr = sc.nextLine();
+        System.out.print("Enter your account type: ");
+        type = sc.nextLine();
+        System.out.print("Enter your account number: ");
+        accno = sc.nextInt();
+        System.out.print("Enter the initial balance: ");
+        bal = sc.nextInt();
     }
 
     public void deposit() {
@@ -27,7 +28,7 @@ class BankApp {
         int amt = sc.nextInt();
         bal = bal + amt;
         System.out.println("Thank you for depositing");
-        System.out.println("Your current balance is = " + bal);
+        System.out.println("Your current balance is: " + bal);
     }
 
     public void withdraw() {
@@ -35,11 +36,11 @@ class BankApp {
         int amt = sc.nextInt();
         bal = bal - amt;
         System.out.println("Please collect your cash");
-        System.out.println("Your current balance is = " + bal);
+        System.out.println("Your current balance is: " + bal);
     }
 
     public void checkbal() {
-        System.out.println("Account number= " + accno + "\nBalance= " + bal);
+        System.out.println("Account number: " + accno + "\nBalance: " + bal);
     }
 
     public void display() {
@@ -52,14 +53,15 @@ class BankApp {
 
     public static void main(String args[]) {
         Scanner inp = new Scanner(System.in);
-        BankApp cu = new BankApp(inp);
+        BankPavan055 cu = new BankPavan055(inp);
         System.out.println("Welcome to the banking application! Your details are given below");
         cu.display();
         int opt;
         char ch;
         boolean keepOnGoing;
         do {
-            System.out.println("Enter an option");
+            System.out.println("Enter your choice");
+            System.out.println("1:Deposit 2:Withdrawal 3.Check Balance 4.Display");
             opt = inp.nextInt();
             switch (opt) {
                 case 1:
@@ -77,12 +79,13 @@ class BankApp {
                 default:
                     System.out.println("Invalid Option");
             }
-            System.out.println("Would you like to continue?");
-            ch = Character.toLowerCase(inp.next().charAt(0));
-            if (ch == 'y') {
+            System.out.println("Would you like to continue (Y/N)?");
+            ch = Character.toUpperCase(inp.next().charAt(0));
+            if (ch == 'Y') {
                 keepOnGoing = true;
-            } else if (ch == 'n') {
+            } else if (ch == 'N') {
                 keepOnGoing = false;
+                System.out.println("Thank you for using the application!!!!");
             } else {
                 System.out.println("Invalid Response exiting !!!");
                 keepOnGoing = false;

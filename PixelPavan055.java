@@ -2,24 +2,30 @@
 // Model to HSV Color Model
 import java.util.Scanner;
 
-class Pixel {
+class PixelPavan055 { 
+    double r;
+    double g;
+    double b;
 
-    public void HSVcalculator(Scanner sc) {
+    public PixelPavan055(Scanner sc) {
 
         // R, G, B values are divided by 255
         // to change the range from 0 to 255 to 0 to 1
 
         System.out.print("Enter Red Colour: ");
-        double r = sc.nextDouble();
+        r = sc.nextDouble();
         r = r / 255.0;
 
         System.out.print("Enter Green Colour: ");
-        double g = sc.nextDouble();
+        g = sc.nextDouble();
         g = g / 255.0;
 
         System.out.print("Enter Blue Colour: ");
-        double b = sc.nextDouble();
+        b = sc.nextDouble();
         b = b / 255.0;
+    }
+
+    public void HSVcalculator() {
 
         // h, s, v = hue, saturation, value
         double max = Math.max(r, Math.max(g, b)); // maximum of r, g, b
@@ -59,7 +65,7 @@ class Pixel {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Pixel inp = new Pixel();
-        inp.HSVcalculator(sc);
+        PixelPavan055 inp = new PixelPavan055(sc);
+        inp.HSVcalculator();
     }
 }
